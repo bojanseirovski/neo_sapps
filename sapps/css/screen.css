@@ -1,0 +1,240 @@
+html {
+    height: 100%;
+	background: url(../images/pattern.png);
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+footer{
+
+    text-align: center;
+}
+header {
+	float: left;
+	height: 50px;
+	width: 100%;
+	box-shadow: 0px 0px 8px #000;
+	background: #686868;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY4Njg2OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #686868 0%, #0e0e0e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#686868), color-stop(100%,#0e0e0e));
+	background: -webkit-linear-gradient(top,  #686868 0%,#0e0e0e 100%);
+	background: -o-linear-gradient(top,  #686868 0%,#0e0e0e 100%);
+	background: -ms-linear-gradient(top,  #686868 0%,#0e0e0e 100%);
+	background: linear-gradient(to bottom,  #686868 0%,#0e0e0e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#686868', endColorstr='#0e0e0e',GradientType=0 );
+}
+
+header h1 {
+	float: left;
+	margin: 0;
+	font-family: "PirulenRegular", sans-serif;
+	font-size: 1.4em;
+	color: #FFF;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.yellow {
+	color: #fcea67;
+}
+
+.logo-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.form-signin {
+	display: none;
+	float: right;
+	max-width: 300px;
+	padding: 19px;
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	right: 10%;
+	background-color: #EEE;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 7px;
+	box-shadow: 0px 0px 5px #666;
+}
+
+.wrap {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	float: left;
+}
+
+.p20 {
+	float: left;
+	width: 20%;
+	background: #FF0;
+}
+
+.p80 {
+	float: left;
+	width: 80%;
+	background: #0CC;
+}
+
+#sapps-logo {
+	background: url(../images/sapps-logo.png);
+	width: 140px;
+	height: 140px;
+	margin-top: -2px;
+	float: left;
+	box-shadow: 0 4px 5px -3px #999;
+}
+
+#sapps-logo:hover {
+	background: url(../images/sapps-logo-hover.png);
+}
+
+#user-nav {
+	float: right;
+}
+
+#user-nav ul {
+	margin: 0;
+}
+
+.icon-th-list {
+	color: #FFF;
+}
+
+#user-nav ul li {
+	display: inline;
+	margin: 5px;
+	line-height: 50px;
+}
+
+#user-nav ul li a {
+	text-decoration: none;
+
+}
+
+#main-nav {
+	width: 100%;
+	float: left;
+	height: 70px;
+	background: #FFF;
+	box-shadow: 0px 0px 5px #999;
+	opacity: 0.9;
+}
+
+#main-nav nav {
+	float: left;
+}
+
+#main-nav nav ul {
+	margin: 0;
+	padding: 0;
+	
+}
+
+#main-nav nav ul li {
+	display: inline;
+}
+
+#main-nav nav ul li a {
+	color: #000;
+	text-decoration: none;
+	line-height: 70px;
+	padding: 7px 20px;
+	margin-right: 10px;
+}
+
+#main-nav nav ul li.active a, #main-nav nav ul li a:hover {
+	background: #333;
+	color: #FFF!important;
+	border-radius: 5px;
+}
+
+div#content {
+	width: 100%;
+	height: 100%;
+}
+section#content {
+	width: 100%;
+	height: 100%;
+	background: url(../images/world-map-solid-opa-2.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.white {
+	background: #FFF;
+}
+
+#object-info {
+	background-color:#fff;
+	box-shadow: 0px 0px 5px #000;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+
+@media screen and (max-width: 800px) {
+
+.form-signin {
+	max-width: 200px;
+}
+
+.wrap {
+	width: 100%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+header h1 {
+	font-size: 1em;
+}	
+
+.logo-image {
+	display: none;
+}
+
+#user-nav ul li a {
+	font-size: 12px;
+}
+
+#main-nav {
+	height: 50px;
+}
+
+#main-nav nav ul li a {
+	border-radius: 5px;
+	line-height: 50px;
+	padding: 5px 10px;
+	margin-right: 0px;
+}
+.form-signin {
+	right: 0%;
+}
+
+.form-signin-heading {
+	font-size: 2em;
+}
+
+.p20 {
+	width: 30%;
+}
+
+.p80 {
+	width: 70%;
+}
+	
+}
+

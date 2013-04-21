@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PirulenRegular';
+    src: url('pirulen.eot');
+    src: url('pirulen.eot') format('embedded-opentype'),
+         url('pirulen.woff') format('woff'),
+         url('pirulen.ttf') format('truetype'),
+         url('pirulen.svg#PirulenRegular') format('svg');
+}
