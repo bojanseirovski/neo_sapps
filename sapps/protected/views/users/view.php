@@ -1,3 +1,4 @@
+<section class="white wrap reg">
 <?php
 /* @var $this UsersController */
 /* @var $model Users */
@@ -21,42 +22,19 @@ if (Yii::app()->user->name == 'admin@admin.com') {
 }
 ?>
 
-<h1>Profile for <?php echo Yii::app()->session['user']['fname'] . ' ' . Yii::app()->session['user']['lname']; ?></h1>
+<h1>Profile for <?php echo Yii::app()->session['user']['fname'].' '.Yii::app()->session['user']['lname']; ?></h1>
 
 <?php
-$widget_array = array();
-if (strlen($model->country) > 3) {
-    $widget_array = array(
-        'data' => $model,
-        'attributes' => array(
-            'email',
-            'fname',
-            'lname',
-            'username',
-            array(
-                'name'=>'country',
-                'label' => 'Custom location',
-                'type' => 'raw',
-                'value' => $model->country
-            ),
-            'twitter',
-        ),
-    );
-} 
-else {
-    $widget_array = array(
-        'data' => $model,
-        'attributes' => array(
-            'email',
-            'fname',
-            'lname',
-            'username',
-            'country',
-            'twitter',
-        ),
-    );
-}
-
-
-$this->widget('zii.widgets.CDetailView', $widget_array);
+$this->widget('zii.widgets.CDetailView', array(
+    'data' => $model,
+    'attributes' => array(
+        'email',
+        'fname',
+        'lname',
+        'username',
+        'country',
+        'twitter',
+    ),
+));
 ?>
+</section>

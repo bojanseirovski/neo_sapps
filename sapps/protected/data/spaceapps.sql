@@ -18,9 +18,9 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `spaceapps`
---
-CREATE DATABASE `spaceapps` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `spaceapps`;
+
+-- CREATE DATABASE `spaceapps` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- USE `spaceapps`;
 
 -- --------------------------------------------------------
 

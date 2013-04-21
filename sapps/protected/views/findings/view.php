@@ -1,3 +1,4 @@
+<section class="white wrap reg">
 <?php
 /* @var $this FindingsController */
 /* @var $model Findings */
@@ -68,7 +69,6 @@ if(Yii::app()->user->isGuest){
     <div class="fb-like" data-href="<?php echo Yii::app()->request->hostInfo.''.Yii::app()->request->baseUrl.'/index.php?r='.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id.'&id='.$model->id;?>" data-send="true" data-width="450" data-show-faces="false"></div>
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo Yii::app()->request->hostInfo.''.Yii::app()->request->baseUrl.'/index.php?r='.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id.'&id='.$model->id;?>">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    <span><a href="#" id="make_fav">Add as favorite</a></span>
 </div>
 <hr/>
 <div id="new_comment">
@@ -83,7 +83,7 @@ if(Yii::app()->user->isGuest){
 <div id="comments">
     <hr/>
     <div id="comments_title">
-        What do others have to say about this:
+        What others have to say about this:
     </div>
     <hr/>
 <?php 
@@ -100,3 +100,4 @@ if(!empty($comments) && !empty($users)){
 }
 ?>
 </div>
+</section>

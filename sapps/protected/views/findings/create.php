@@ -1,3 +1,4 @@
+<section class="white wrap reg">
 <?php
 /* @var $this FindingsController */
 /* @var $model Findings */
@@ -10,6 +11,7 @@ if(Yii::app()->user->name == 'admin@admin.com' ){
 }
 ?>
 
-<h1>Create Findings</h1>
+<h1>New NEO</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</section>

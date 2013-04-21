@@ -29,7 +29,7 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
-    <body <?php echo ($this->action->Id!='contact')?'class=" white"':''; ?> >
+    <body <?php echo ($this->action->Id!='contact')?'':''; ?> >
         <?php 
         
         $login_out_text ='Sign In';
@@ -62,11 +62,9 @@
                      <?php
                     $menu_items = array('items' => array(
                         array('label' => 'Home', 'url' => array('/site/index')),
-                        array('label' => 'Findings', 'url' => array('/findings/index')),
+                        array('label' => 'NEOs', 'url' => array('/findings/index')),
                         array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
                         array('label' => 'Contact', 'url' => array('/site/contact')),
-//                        array('label' => 'Favourite findings', 'url' => array('/findings/favourites'),'visible' => !Yii::app()->user->isGuest),
-                        array('label' => 'My Location', 'url' => array('/users/location'),'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Account', 'url' => array('/users/view&id=' . Yii::app()->session['user']['id']), 'visible' => !Yii::app()->user->isGuest),
                     ),
                 );

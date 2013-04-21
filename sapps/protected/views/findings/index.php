@@ -6,13 +6,10 @@ $this->menu = array(
     array('label' => 'New Entry', 'url' => array('create')),
 );
 
-if (Yii::app()->user->name == 'admin@admin.com') {
-    $this->menu[] = array('label' => 'Manage Findings', 'url' => array('admin'));
-}
 ?>
 <section class="wrap white reg">
     <article class="pl10">    
-        <h1>Findings</h1>
+        <h1>NEOs - Near Earth Objects</h1>
 
         <?php
         $this->widget('zii.widgets.CListView', array(

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="inc/css/screen.css">
+<link rel="stylesheet" type="text/css" href="inc/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="inc/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="inc/fonts/pirulen.css">
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//raw.github.com/dinbror/bpopup/master/jquery.bpopup.min.js"></script>
+<script src="inc/js/login-box.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>SAPPS</title>
+</head>
+
+<body>
+
+    <header>
+		<section class="wrap">
+        	<img class="logo-image" src="img/sapps-logo-gray.png" alt="nasa logo" /><h1>NASA<span class="yellow">NEO</span>Database</h1>
+            <nav id="user-nav"><ul><li><a class="btn" href="register.html">Register</a></li><li><a class="btn btn-success" href="login.html">Sign in</a></li></ul></nav>
+        </section>
+    </header>
+    
+    <section id="main-nav">
+        <section class="wrap">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="findings.html">Findings</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </section>    
+    </section>
+    
+    <form class="form-signin">
+    <div id="tapje"></div>
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <input type="text" class="input-block-level" placeholder="Email address">
+            <input type="password" class="input-block-level" placeholder="Password">
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+            <button class="btn btn-large btn-success" type="submit">Sign in</button>
+    </form>
+    <section class="wrap white reg">
+
+	<article class="pl10">
+			<h1>Contact</h1>
+            <h3>Feel free to contact us at any time.</h3>
+    	<form>
+        	<div class="controls controls-row">
+            	<input id="name" name="name" type="text" class="span3" placeholder="Name"> 
+            	<input id="email" name="email" type="email" class="span3" placeholder="Email address">
+      		</div>
+      		<div class="controls">
+          		<textarea id="message" name="message" class="span6" placeholder="Your Message" rows="5"></textarea>
+      		</div>
+      
+      		<div class="controls">
+          		<button id="contact-submit" type="submit" class="btn btn-success input-medium mb10">Send Message</button>
+      		</div>
+ 		</form>
+   
+    </article>
+        
+    </section>
+</body>
+</html>
