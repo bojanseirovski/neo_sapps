@@ -39,16 +39,6 @@
             $login_out_link = Yii::app()->request->baseUrl.'/index.php?r=site/logout';    
         }
 ?>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=256369831134572";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script>
-        
         <header>
 	<section class="wrap">
         	<img class="logo-image" src="images/sapps-logo-gray.png" alt="nasa logo" /><h1> NEO for everyone<span class="yellow"> NASA</span> Spaceapps Challenge</h1>
@@ -65,6 +55,7 @@
                         array('label' => 'NEOs', 'url' => array('/findings/index')),
                         array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
                         array('label' => 'Contact', 'url' => array('/site/contact')),
+                        array('label' => 'My Location', 'url' => array('/users/location'),'visible' => !Yii::app()->user->isGuest),
                         array('label' => 'Account', 'url' => array('/users/view&id=' . Yii::app()->session['user']['id']), 'visible' => !Yii::app()->user->isGuest),
                     ),
                 );
@@ -84,6 +75,7 @@
         
     
         <form class="form-signin" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/login" method="post">
+        <div id="tapje"></div>
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <input type="text" name="LoginForm[username]" class="input-block-level" placeholder="Email address">
                 <input type="password" name="LoginForm[password]" class="input-block-level" placeholder="Password">
