@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 21, 2013 at 11:00 AM
+-- Generation Time: Apr 21, 2013 at 02:59 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `spaceapps`
 --
--- CREATE DATABASE `spaceapps` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
--- USE `spaceapps`;
+CREATE DATABASE `spaceapps` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `spaceapps`;
 
 -- --------------------------------------------------------
 
@@ -382,16 +382,31 @@ CREATE TABLE IF NOT EXISTS `findings` (
   `motion` enum('total','ra_decl','ra_sky') COLLATE utf8_unicode_ci NOT NULL,
   `output` enum('full','brief') COLLATE utf8_unicode_ci NOT NULL,
   `suppress_output` enum('never','sunrise_sunset','civil_tiwlight','nautical_twilight','astronomical_twilight') COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `findings`
 --
 
-INSERT INTO `findings` (`id`, `user_id`, `designation`, `creator`, `neo_score`, `discovery_date`, `ra`, `declination`, `v`, `date_updated`, `note`, `nob`, `arc`, `h`, `viewpoint_type`, `ephemeris_interval`, `start_ephemerides`, `display_positions`, `display_motions`, `motion`, `output`, `suppress_output`) VALUES
-(1, 1, '{dkjflkjdflkdlkjf}', 'bojan', 0, '2013-04-17', '12', '22', 0, '2013-04-17', 'skldslkjdkls', 0, 0, 0, 'geocentric', 60, 0, 'sec', 0, 'total', 'full', 'never'),
-(2, 2, '{87687687678687687}', '', 0, '0', '', '', 0, '0', '', 0, 0, 0, 'Geocentric', 0, 0, '0', 0, 'total', 'full', 'never');
+INSERT INTO `findings` (`id`, `user_id`, `designation`, `creator`, `neo_score`, `discovery_date`, `ra`, `declination`, `v`, `date_updated`, `note`, `nob`, `arc`, `h`, `viewpoint_type`, `ephemeris_interval`, `start_ephemerides`, `display_positions`, `display_motions`, `motion`, `output`, `suppress_output`, `image`) VALUES
+(1, 1, '{dkjflkjdflkdlkjf}', 'bojan', 0, '2013-04-17', '12', '22', 0, '2013-04-17', 'skldslkjdkls', 0, 0, 0, 'geocentric', 60, 0, 'sec', 0, 'total', 'full', 'never', ''),
+(2, 2, '{87687687678687687}', '', 0, '0', '', '', 0, '0', '', 0, 0, 0, 'Geocentric', 0, 0, '0', 0, 'total', 'full', 'never', ''),
+(4, 4, 'Bla112', 'bobi', 80, '2013-04-21', '12', '11', 12, '2013-04-21', 'Something I saw ', 5, 88, 78, 'observatory-300', 60, 0, 'min', 11, 'total', 'full', 'never', ''),
+(5, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(6, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(7, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(8, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(9, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(10, 4, 'jhkjhkj', 'bobi', 87, '2013-04-21', '78', '787', 78, '2013-04-21', '97879', 6, 76, 7, 'geocentric', 60, 7, 'sec', 77, '', 'full', 'never', ''),
+(11, 4, 'jhkjhkj', 'bobi', 77, '2013-04-21', '77', '78', 8, '2013-04-21', 'kjhkhkh', 7, 77, 7, 'geocentric', 60, 0, 'sec', 6, '', 'full', 'never', ''),
+(12, 4, 'kjhkjh', 'bobi', 88, '2013-04-21', '78', '78', 77, '2013-04-21', 'hghgjgj', 7, 7, 88, 'geocentric', 60, 0, 'sec', 6, '', 'full', 'never', 'card.jpg'),
+(13, 4, 'kjhkjh', 'bobi', 88, '2013-04-21', '78', '78', 77, '2013-04-21', 'hghgjgj', 7, 7, 88, 'geocentric', 60, 0, 'sec', 6, '', 'full', 'never', 'card.jpg'),
+(14, 4, 'kjhkjh', 'bobi', 88, '2013-04-21', '78', '78', 77, '2013-04-21', 'hghgjgj', 7, 7, 88, 'geocentric', 60, 0, 'sec', 6, '', 'full', 'never', 'card.jpg'),
+(15, 4, 'kjhkjh', 'bobi', 88, '2013-04-21', '78', '78', 77, '2013-04-21', 'hghgjgj', 7, 7, 88, 'geocentric', 60, 0, 'sec', 6, '', 'full', 'never', 'card.jpg'),
+(19, 6, '6587687687', 'bhbh', 88, '2013-04-21', '98', '98', 98, '2013-04-21', 'hhbbjb', 3, 67, 6767, 'geocentric', 60, 0, 'sec', 78, '', 'full', 'never', 'card.jpg'),
+(18, 6, '6587687687', 'bhbh', 88, '2013-04-21', '98', '98', 98, '2013-04-21', 'hhbbjb', 3, 67, 6767, 'geocentric', 60, 0, 'sec', 78, '', 'full', 'never', 'card.jpg');
 
 -- --------------------------------------------------------
 
@@ -406,13 +421,14 @@ CREATE TABLE IF NOT EXISTS `rankings` (
   `finding_id` int(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `rankings`
 --
 
 INSERT INTO `rankings` (`id`, `user_id`, `finding_id`) VALUES
+(18, 6, 19),
 (17, 4, 1),
 (16, 1, 1);
 
@@ -433,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `country` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `twitter` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `users`
@@ -443,7 +459,8 @@ INSERT INTO `users` (`id`, `email`, `fname`, `lname`, `password`, `username`, `c
 (1, 'druid0101@gmail.com', 'Bojan', 'Seirovski', '123456', 'bojan', 'DE', 'bojanseirovski'),
 (2, 'admin@admin.com', 'Admin', 'Admin', '123456', 'admin', 'CA', ''),
 (3, 'bbb@ggg.com', 'BBB', 'GGGG', '123456', 'bbbggg', 'MK', ''),
-(4, 'bojanseirovski@gmail.com', 'Bobi', 'Seirovski', '123456', 'bobi', 'BT', 'bseirovski');
+(4, 'bojanseirovski@gmail.com', 'Bobi', 'Seirovski', '123456', 'bobi', 'BT', 'bseirovski'),
+(6, 'b_seirovski@yahoo.com', 'bihbib', 'bjbobj', '123456', 'bhbh', 'DE', 'hjbhjghjg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
