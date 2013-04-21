@@ -102,11 +102,20 @@ class FindingsController extends Controller {
                 $data['viewpoint_type'] = $data['viewpoint_type'] . '-' . $data['longitude'] . '-' . $data['latitude'] . '-' . $data['altitude'];
                 unset($data['observatory']);
             }
-
+//            var_dump($data);die;
             $model->attributes = $data;
+            $model->image=CUploadedFile::getInstance($model,'image');
 //			$model->attributes=$_POST['Findings'];
-            if ($model->save())
+            if ($model->save()){
+                if(!empty($model->image)){
+                    if(!file_exists('uploads/'.Yii::app()->session['user']['id'])){
+                        mkdir('uploads/'.Yii::app()->session['user']['id']);
+                    }
+//                    $model->image->saveAs('/home/users/web/b881/moo.webhomecamcom/bs/sapps/images/'.Yii::app()->session['user']['id']);
+                    $model->image->saveAs('uploads/'.Yii::app()->session['user']['id'].'/'.$model->image);
+                }
                 $this->redirect(array('view', 'id' => $model->id));
+            }
         }
 
         $this->render('create', array(

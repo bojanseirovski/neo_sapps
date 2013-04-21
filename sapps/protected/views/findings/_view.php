@@ -24,6 +24,11 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ra')); ?>:</b>
 	<?php echo CHtml::encode($data->ra); ?>
 	<br />
+        <b>Photo:</b>
+        <img src="<?php echo CHtml::encode($data->image); ?>" />
+             
+	<br />
+        
     </span>
     <span id="single_finding_row_right">
         <?php 

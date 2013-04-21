@@ -40,6 +40,11 @@ if((Yii::app()->session['user']['id'] == $model->user_id) || (Yii::app()->user->
 		'motion',
 		'output',
 		'suppress_output',
+                array(        
+                 'name'=>'image',
+                 'value'=> CHtml::link($model->image,'uploads/'.Yii::app()->session['user']['id'].'/'.$model->image),
+                 'type'=>'raw',
+            ),
 	),
 )); 
 

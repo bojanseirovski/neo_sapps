@@ -7,9 +7,12 @@
 
         <p id="about text1">
             This is a result of the NASA Space Apps Challenge Event, held in Toronto,ON, Canada.
+            <a href="http://www.minorplanetcenter.net/iau/NEO/toconfirm_tabular.html">Minor Planet Center</a>
         </p>
         <p id="about text2">
             This web site/application should help amateur astronomers to collaborate.
+            How:
+            Sign up for an account and the rest is very easy.
         </p>
         <p id="about text3">
             Authors: 

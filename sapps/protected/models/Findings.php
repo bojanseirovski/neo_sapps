@@ -67,6 +67,7 @@ class Findings extends CActiveRecord
 			array('motion', 'length', 'max'=>7),
 			array('output', 'length', 'max'=>5),
 			array('suppress_output', 'length', 'max'=>21),
+//			array('image', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, user_id, designation, creator, neo_score, discovery_date, ra, declination, v, date_updated, note, nob, arc, h, viewpoint_type, ephemeris_interval, start_ephemerides, display_positions, display_motions, motion, output, suppress_output', 'safe', 'on'=>'search'),
@@ -112,6 +113,7 @@ class Findings extends CActiveRecord
 			'motion' => 'Motion',
 			'output' => 'Output',
 			'suppress_output' => 'Suppress Output',
+			'image' => 'Photo',
 		);
 	}
 

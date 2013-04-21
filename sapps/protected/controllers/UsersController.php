@@ -83,8 +83,12 @@ class UsersController extends Controller
 		if(isset($_POST['Users']))
 		{
 			$model->attributes=$_POST['Users'];
-			if($model->save())
+			if($model->save()){
 				$this->redirect(array('view','id'=>$model->id));
+                                
+//                                  $model->image->saveAs('/home/users/web/b881/moo.webhomecamcom/bs/sapps/uploads/'.Yii::app()->session['user']['id']);
+                                    mkdir('uploads/'.$model->id);
+                        }
 		}
 
 		$this->render('create',array(

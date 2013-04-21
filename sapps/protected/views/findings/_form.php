@@ -9,6 +9,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'findings-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array(
+            'enctype' => 'multipart/form-data'
+        ),    
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -146,6 +149,14 @@
 		<?php echo $form->labelEx($model,'suppress_output'); ?>
 		<?php echo $form->dropDownList($model,'suppress_output',array('never'=>'never','sunrise_sunset'=>'sunrise/sunset','civil_twilight'=>'civil/twilight','nautical_twilight'=>'nautical/twilight','astronomical_twilight'=>'astronomical/twilight')); ?>
 		<?php echo $form->error($model,'suppress_output'); ?>
+	</div>
+
+	<div class="row">
+		<?php   
+                        echo $form->labelEx($model, 'image');
+                        echo $form->fileField($model, 'image');
+                        echo $form->error($model, 'image');
+                 ?>
 	</div>
 
 	<div class="row buttons">

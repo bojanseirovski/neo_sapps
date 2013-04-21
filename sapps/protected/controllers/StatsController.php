@@ -33,4 +33,11 @@ class StatsController extends Controller
 		);
 	}
 	*/
+        
+        public function actionGetlastten(){
+            
+        }
+        public function actionGetlastfifty(){
+            
+        }
 }
