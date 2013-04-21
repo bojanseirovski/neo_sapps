@@ -37,7 +37,7 @@ class Users extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('email, fname, lname, password, username, country, twitter', 'required'),
+            array('email, fname, lname, password, username, country', 'required'),
             array('email, username', 'length', 'max' => 120),
             array('fname, lname', 'length', 'max' => 30),
             array('password', 'length', 'max' => 64),
@@ -45,7 +45,7 @@ class Users extends CActiveRecord {
             array('twitter', 'length', 'max' => 200),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, email, fname, lname, password, username, country, twitter', 'safe', 'on' => 'search'),
+            array('id, email, fname, lname, password, username, country', 'safe', 'on' => 'search'),
         );
     }
 
@@ -71,7 +71,7 @@ class Users extends CActiveRecord {
             'password' => 'Password',
             'username' => 'Username',
             'country' => 'Country',
-            'twitter' => 'twiiter',
+            'twitter' => 'Twiiter',
         );
     }
 

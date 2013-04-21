@@ -49,6 +49,7 @@
 		<?php echo $form->labelEx($model,'country'); ?>
                 <?php echo $form->dropDownList($model,'country',$countries); ?>
 		<?php echo $form->error($model,'country'); ?>
+                Not in the list? <a href="<?php echo Yii::app()->request->hostInfo.''.Yii::app()->request->baseUrl.'/index.php?r=users/location';?>">Click here!</a>
 	</div>
 
 	<div class="row">

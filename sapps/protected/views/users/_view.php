@@ -20,9 +20,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
 	<?php echo CHtml::encode($data->username); ?>
 	<br />
-
+        
 	<b><?php echo CHtml::encode($data->getAttributeLabel('country')); ?>:</b>
-	<?php echo CHtml::encode($data->country); ?>
+	<?php echo CHtml::encode($data->country.strlen($data->country)); ?>
 	<br />
         
 	<b><?php echo CHtml::encode($data->getAttributeLabel('twitter')); ?>:</b>

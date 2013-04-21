@@ -30,7 +30,7 @@ class FindingsController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update', 'delete', 'makecomment', 'rank'),
+                'actions' => array('create', 'update', 'delete', 'makecomment', 'rank','favourites'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -102,7 +102,6 @@ class FindingsController extends Controller {
                 $data['viewpoint_type'] = $data['viewpoint_type'] . '-' . $data['longitude'] . '-' . $data['latitude'] . '-' . $data['altitude'];
                 unset($data['observatory']);
             }
-//            var_dump($data);die;
             $model->attributes = $data;
             $model->image=CUploadedFile::getInstance($model,'image');
 //			$model->attributes=$_POST['Findings'];
@@ -279,7 +278,18 @@ class FindingsController extends Controller {
             'model' => $model,
         ));
     }
-
+    
+    /**
+     * Show a list of favourite 
+     * entries
+     */
+    public function actionFavourites(){
+        $favourites = Favourites::model()->findAllByAttributes(array('user_id'=>Yii::app()->session['user']['id']));        
+        $this->render('favourites', array(
+            'model' => $model,
+        ));
+    }
+    
     /**
      * Returns the data model based on the primary key given in the GET variable.
      * If the data model is not found, an HTTP exception will be raised.

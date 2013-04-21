@@ -98,7 +98,7 @@
 		<?php echo $form->labelEx($model,'viewpoint_type'); ?>
                 <?php echo $form->dropDownList($model,'viewpoint_type',array('geocentric'=>'Geocentric','observatory'=>'Observatory code','coord'=>'Coordinates')); ?>
                 <div id="observatory" style="display: none;">
-                    Observatory code:<input type="text" name="Findings[observatory]" value="<?php echo Yii::app()->session['Observatory']; ?>">                    
+                    <a href="http://www.minorplanetcenter.net/iau/lists/ObsCodes.html" target="_blank">Observatory code</a>:<input type="text" name="Findings[observatory]" value="<?php echo Yii::app()->session['Observatory']; ?>">                    
                 </div> 
                 <div id="view_coord" style="display: none;">
                     Longitude:<input type="text" name="Findings[longitude]" value="<?php echo Yii::app()->session['Longitude']; ?>">(deg)E, 

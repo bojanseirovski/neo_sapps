@@ -32,7 +32,7 @@ class UsersController extends Controller
 				'users'=>array('admin@admin.com'),
 			),
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('view'),
+				'actions'=>array('view','location'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'update' actions
@@ -40,7 +40,7 @@ class UsersController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' actions
-				'actions'=>array('create'),
+				'actions'=>array('create','savecustomloc'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -128,6 +128,37 @@ class UsersController extends Controller
 		));
 	}
 
+        /**
+         * Loads a static page with map/JS to 
+         * help people to locate themselfs
+         * (people living in uncharted areas)
+         */
+        public function actionLocation(){
+            
+            $this->render('location');
+        }
+        
+        
+        /**
+         * Save custom location
+         */
+        public function actionSavecustomloc(){
+            $request = $_POST;
+            $response = array();
+            if(!empty($request['user_id'])){
+                try{
+                    Users::model()->updateByPk($request['user_id'], array('country'=>$request['loc']));
+                    $response['status'] = "OK";
+                }
+                catch (Exception $e){
+                    $response['status'] = "error";
+                }
+                echo json_encode($response);
+            }
+            else{
+                 $this->redirect(Yii::app()->homeUrl);
+            }
+        }
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.

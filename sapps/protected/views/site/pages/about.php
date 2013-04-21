@@ -13,6 +13,13 @@
             This web site/application should help amateur astronomers to collaborate.
             How:
             Sign up for an account and the rest is very easy.
+            
+            Features: 
+        <ul>
+            <li>Add new sightings(potential new findings): just add the important parameters you can even upload a photo</li>
+            <li>Rate/comment on other entries </li>
+            <li></li>
+        </ul>
         </p>
         <p id="about text3">
             Authors: 
@@ -35,6 +42,9 @@
             <span><a href="http://ca.linkedin.com/pub/dennis-silin/3/985/939/">Denis Silin</a>      </span>
             <span><a href="http://ca.linkedin.com/pub/andries-hannaart/6/953/846">Andreis Haannart</a>      </span>
             <span><a href="http://ca.linkedin.com/in/seirovski/">Bojan Seirovski</a>        </span>
+        </p>
+        <p id="about text4">
+            Released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>
         </p>
     </article>
 
