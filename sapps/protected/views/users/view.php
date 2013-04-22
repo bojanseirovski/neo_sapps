@@ -18,7 +18,7 @@ if (Yii::app()->user->name == 'admin@admin.com') {
         array('label' => 'Manage Users', 'url' => array('admin')),
     );
 } else {
-    $this->menu = array(array('label' => 'Change account', 'url' => array('update', 'id' => $model->id)));
+    $this->menu = array(array('label' => 'Edit account', 'url' => array('update', 'id' => $model->id)));
 }
 ?>
 

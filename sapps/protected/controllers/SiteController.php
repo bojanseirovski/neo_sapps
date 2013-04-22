@@ -33,7 +33,7 @@ class SiteController extends Controller
                 $countries = array();
                 foreach ($last_five_find as $one){
                     $user = Users::model()->findByPk($one->user_id );
-                    if(count($user->country)<4){
+                    if(strlen($user->country)<4){
                         $countries[] = "'".$user->country."'";                    
                     }
                 }
